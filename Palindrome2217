@@ -1,0 +1,28 @@
+package LeetCode;
+public class Palindrome2217 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr1= {1,2,3,4,5,90};
+		int n=3,a=0;
+		int[] arr2=new int[100];
+		int k=(int)Math.pow(10, n);
+		int m=(int)Math.pow(10, n-1);
+		for(int i=m;i<k;i++) {
+			int temp=i,sum=0,s=i;
+	        while(s>0){
+	            int rem=s%10;
+	            sum=sum*10+rem;
+	            s/=10;
+	        }
+	        if(sum==temp) {
+	        	arr2[a++]=temp;
+	        }
+		}
+		for(int i=0;i<arr1.length;i++) {
+			System.out.println(arr2[arr1[i]-1]);
+		}
+		
+	}
+
+}
